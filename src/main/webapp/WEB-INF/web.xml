@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- member 주소 매핑 -->
+<!--   <servlet> -->
+<!--   	<servlet-name>AdminCarController</servlet-name> -->
+<!--   	<servlet-class>com.taiso.admin.car.action.AdminCarController</servlet-class> -->
+<!--   </servlet> -->
+  
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>AdminCarController</servlet-name> -->
+<!--   	<url-pattern>*.ad</url-pattern> -->
+<!--   </servlet-mapping> -->
+  <!-- member 주소 매핑 -->
+  
+   <!-- 한글처리 필터 설정하기 -->
+  <filter>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Set Character Encoding</filter-name>
+  	<url-pattern>/*</url-pattern> 
+  </filter-mapping>
+  <!-- 한글처리 필터 설정하기 -->
+  
+  
+</web-app>
